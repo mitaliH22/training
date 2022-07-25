@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+html, body
+{
+    height: 100%;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+.top{
+    background-color: #00b1b0;
+}
+.heading{
+    text-align: center;
+    width:800px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 50px;
+    padding-bottom: 0;
+}
+.top h2{
+    margin-top: 0;
+}
+.table{
+    padding:30px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-style: hidden;
+  width: 70%;
+  height: 100%;
+  table-layout: fixed;
+}
+table td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: larger;
+}
+.table h2,h3,h4,h5,h6{
+    margin: 0 auto;
+}
+.table-col{
+    text-align: center;
+    height: 100px;
+    max-height: 100%;
+}
+.row1{
+    border-right: none;
+}
+.footer{
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+.values{
+    box-sizing: border-box;
+    padding:20px;
+}
+.values p{
+    opacity: 0.5;
+    
+}
+img{
+    width: 100px;
+    max-width: 100%;
+    filter: grayscale(100%);
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  align-items: center;
+}
+.item {
+  padding: 20px;
+}
+
+@media  screen and (max-width: 912px){
+    table tr > *{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    table tr {
+        display: table-cell;
+        vertical-align:top;
+    }
+    table td{
+        border-bottom: none;
+
+    }
+    table td:last-child{
+        border-bottom: 1px solid white;
+    }
+    .container{
+        grid-template-columns: auto auto auto;
+    }
+    
+}
+@media screen and (max-width: 600px){
+    table tr{
+        display: table-row;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .container{
+        grid-template-columns: auto auto;
+    }
+    
+}
+@media screen and (min-width:1640px){
+    .footer{
+        justify-content: center;
+    } 
+    table{
+        width: clamp(60%,30%,20%);
+    }
+}
