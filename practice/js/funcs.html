@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Map, Reduce, Filter</h1>
+    <button>The time is?</button>
+
+    <script>
+        const arr = [5,2,4,1,7];
+        
+        function double(x){
+            return x * 2 ;
+        }
+
+        const output = arr.map(double);
+        console.log(output);
+
+        function odd(x){
+            if(x%2!==0){
+                return x;
+            }else{
+                return false;
+            }
+        }
+        const output2 = arr.filter(odd);
+        console.log(output2);
+
+        function Max(arr){
+            let max=0;
+            for(let i=0; i < arr.length; i++){
+                if(arr[i]>max){
+                    max = arr[i];
+            }
+        }
+        return max;
+    }
+        console.log(Max(arr));
+
+        const output3 = arr.reduce(function(acc,curr){
+                if(curr>acc){
+                    acc=curr;
+                }return acc;
+        },0);
+        console.log(output3);
+        
+        let str = "Max Mayfield in town in st4 \n max in str";
+        // const regex = /[A-Z]/g;
+        const regex = /max/gim;
+        const found = str.match(regex);
+        console.log(found);
+        // document.body.innerHTML= found;
+
+        let string = "100% Complete!";
+        const pat1 = /\w/gi;
+        const f = string.match(pat1);
+        // document.body.innerHTML = f;
+
+        
+    </script>
+</body>
+</html>

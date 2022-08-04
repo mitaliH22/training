@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accordian.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Something something</h1>
+    <div class="accordian">
+        <div class="content-box" >
+            <div class="label" >List 1</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Recusandae, veniam ipsam iure a quis excepturi voluptate
+                    unde eligendi,exercitationem architecto modi. Exercitationem
+                    illo accusantium ex est veritatis voluptas magnam!</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="label">List 2</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Recusandae, veniam ipsam iure a quis excepturi voluptate
+                    unde eligendi,exercitationem architecto modi. Exercitationem
+                    illo accusantium ex est veritatis voluptas magnam!</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="label">List 3</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Recusandae, veniam ipsam iure a quis excepturi voluptate
+                    unde eligendi,exercitationem architecto modi. Exercitationem
+                    illo accusantium ex est veritatis voluptas magnam!</p>
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="label">List 4</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Recusandae, veniam ipsam iure a quis excepturi voluptate
+                    unde eligendi,exercitationem architecto modi. Exercitationem
+                    illo accusantium ex est veritatis voluptas magnam!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrap"> 
+        <div class="button-container">
+            <button onclick="show(event, 'item1')" class="tablinks">Item 1</button>
+            <button onclick="show(event, 'item2')" class="tablinks">Item 2</button>
+            <button onclick="show(event, 'item3')" class="tablinks">Item 3</button>
+            <button onclick="show(event, 'item4')" class="tablinks">Item 4</button>
+        </div>
+        <div class="tab-content" id="item1">Item 1 content</div>
+        <div class="tab-content" id="item2">Item 2 content</div>
+        <div class="tab-content" id="item3">Item 3 content</div>
+        <div class="tab-content" id="item4">Item 4 content</div>
+    </div>
+    <script>
+        const accordian = document.getElementsByClassName("content-box");
+        if(accordian.length > 0){
+        accordian[0].classList.add('active')
+        }
+        for(i=0;i<accordian.length;i++){
+            accordian[i].addEventListener('click',function(){
+                console.log(i,this);
+                  for(j=0;j<accordian.length;j++){
+                    if(accordian[j].classList.contains('active')){
+                        accordian[j].classList.remove('active');
+                    }
+                  }
+                this.classList.toggle('active')
+            })
+        }
+
+        // const btns = document.querySelectorAll("button");
+        // const content = document.querySelectorAll("tab-content");
+        
+        // function show(index,color{
+        //     btns.forEach(function(element){
+        //         element.style.backgroundColor="";
+        //         element.style.color="";
+        //     });
+        //     btns[index].style.backgroundColor=color;
+        //     btns[index].style.color="white"; 
+            
+        //     content.forEach(function(element){
+        //         element.style.display="none";
+        //     });
+        //     content[index].style.display="block";
+        //     content[index].style.backgroundColor=color;
+        // });
+
+
+        function show(evt, id) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(id).style.display="block";
+        evt.currentTarget.className += " active";
+        }
+        show(event,'item1');
+        
+    </script>
+</body>
+</html>

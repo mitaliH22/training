@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #bedfe8;
+    font-size: larger;
+}
+h1{
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+}
+.accordian{
+    width: 500px;
+    margin: 0 auto;
+}
+.accordian .content-box{
+    position: relative;
+    margin: 10px 20px;
+}
+.accordian .content-box .label{
+    position: relative;
+    background-color: rgb(29, 201, 216);
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+.accordian .content-box .label::before{
+    content: "+";
+    position: absolute;
+    transform: translateY(-50%);
+    right: 20px;
+    top: 50%;
+    
+}
+.accordian .content-box .content{
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    /* display: none; */
+    opacity: 0;
+    height:0;
+}
+.accordian .content-box.active .content{
+    padding: 10px;
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+.accordian .content-box.active .label::before{
+    content: "-";
+}
+.wrap{
+    display: inline-block;
+    border: 1px solid black;
+    background:rgb(29, 201, 216);
+}
+button{
+    padding: 10px 50px;
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  
+}
+button:hover{
+    background-color:#ddd;
+}
+.wrap{
+    width: 100%;
+}
+.tab-content{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: center;
+}
+button.active {
+  background-color: red;
+}

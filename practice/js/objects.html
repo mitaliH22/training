@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const wes = new Object({
+        name: "wes",
+        propertyToCheck: "NEVER",
+        clothing: {
+            shirts: 10,
+            pants: 2
+        },
+        sayHello: function(greeting = "Hey") {
+            return `${greeting} ${this.name}`;
+        }
+        });
+        let name1='wes';
+        let name2='wes';
+        console.log(name1===name2);
+        name1 = 'scott';
+        console.log(name1===name2);
+        name1=name2;
+        console.log(name1===name2);
+        name2='tessa';
+        console.log(name1===name2);
+
+        const person1 = {
+        first: "wes",
+        last: "bos"
+        };
+
+        const person2 = {
+        first: "wes",
+        last: "bos"
+        };
+
+        const myMap = new Map();
+        myMap.set('name', 'wes');
+        myMap.set(person2, "really cool");
+        console.log(myMap);
+
+        const names = ['wes', 'kait', 'snickers'];
+        console.log(names[0]);
+    </script>
+</body>
+</html>
