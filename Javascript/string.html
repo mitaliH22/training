@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Remove white spaces from string</h1>
+    String <input type="text" id="input"> <br>
+    <button onclick="removeWhiteSpace()">Remove white space</button> <br>
+    Output <input type="text" id="output"> <br>
+    <h1>Return the no. of vowels</h1>
+    String <input type="text" id="string"> <br>
+    <button onclick="countVowels()">output</button> <br>
+    Output <input type="text" id="string-output">
+    <script>
+        function removeWhiteSpace(){
+        let str = document.getElementById("input").value;
+        let strResult = str.replace(/ /g,'');
+        document.getElementById("output").value = strResult;
+        }
+
+        function countVowels(){
+        let count = 0;
+        let string = document.getElementById("string").value;
+        for (let i = 0; i < string.length;i++){
+            let char = string.charAt(i);
+            if(char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
+                count++;
+            }
+        }
+        document.getElementById("string-output").value = count;
+        }
+    </script>
+</body>
+</html>
