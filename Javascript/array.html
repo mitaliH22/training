@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fibonacci series range</h1>
+    <input type="text" id="range">
+    <button onclick="fib()">Print</button>
+    <script>
+        let a = [2,5,6,4,3];
+        console.log(a);
+        let sum = 0;
+        for(i =0;i<a.length;i++){
+            sum = sum + a[i];
+        }
+        console.log("Sum:",sum);
+
+        // user-defined function
+        function revers(e){
+            for(i=e.length;i>=0;i--){
+                console.log(e[i]);
+            }
+        }
+        revers(a);
+
+        // predefined function
+        console.log(a.reverse());
+
+        //sorting
+        function sortt(p){
+            for(i=0;i<p.length;i++){
+                for(j=i+1;j<p.length;j++){
+                    if(p[i]>p[j]){
+                       let temp = p[i];
+                       p[i] = p[j];
+                       p[j] = temp;
+                    }
+                }
+            }
+            console.log("Sorted array",p);
+        }
+        sortt(a);
+
+        function fib(){
+            let a = parseInt(document.getElementById("range").value);
+            let FirstTerm=0, SecondTerm=1, nextTerm;
+
+            console.log("Fibonacci series");
+            console.log(FirstTerm);
+            console.log(SecondTerm);
+
+              nextTerm = FirstTerm+SecondTerm;
+            while(nextTerm <=a){
+                console.log(nextTerm);
+                FirstTerm = SecondTerm;
+                SecondTerm = nextTerm;
+                nextTerm = nextTerm = FirstTerm+SecondTerm;;
+            }
+            
+
+        }
+
+
+    </script>
+</body>
+</html>

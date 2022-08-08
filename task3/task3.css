@@ -171,10 +171,6 @@ img{
     border: 8px solid;
     text-align: center;
     display: flex;
-    padding: 15px;
-    /* width:200px;
-    max-width: 100%; */
-   
 }
 .sale h1{
     font-size:80px;
@@ -300,11 +296,7 @@ footer p{
     }
     .sale{
         justify-content: center;
-       
     }
-    /* .outlet-text{
-        margin: 0 auto;
-    } */
     .socials h2{
         font-size:40px;
     }

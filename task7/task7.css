@@ -490,7 +490,7 @@ footer{
     }
 
 }
-@media screen and (max-width: 763px){
+@media screen and (max-width: 767px){
     .head-text h1{
         font-size: 25px;
     }
@@ -580,10 +580,15 @@ footer{
     }
     .nav-logo img {
     width: 70%;
+    padding-left: 10px;
 }
     #download-options-img{
         width: 30%;
     }
+    #main-content-img{
+        height: unset;
+    }
+
     
 }
 

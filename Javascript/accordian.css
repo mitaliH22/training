@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
     min-height: 100vh;
     background-color: #bedfe8;
@@ -15,8 +18,8 @@ h1{
 }
 .accordian{
     width: 500px;
-    margin: 0 auto;
-}
+    margin: 50px auto;
+    }
 .accordian .content-box{
     position: relative;
     margin: 10px 20px;
@@ -81,6 +84,33 @@ button:hover{
     border-top: none;
     text-align: center;
 }
-button.active {
+.tab-content.activeContent{
+    display: block;
+}
+button.activeTab {
   background-color: red;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    height:250px;
+    
+}
+
+.Fixedtop{
+    text-decoration: none;
+    background-color: #ccc;
+    padding: 10px;
+    color: black;
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    
+    
+}
+.stickyy{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }

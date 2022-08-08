@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Even Numbers from 0-10</h1>
+    <button onclick="print()">Print Even</button>
+    <div id="output" style="border: 1px solid solid">
+
+    </div>
+    <h1>Table</h1>
+    <input type="text" id="item">
+    <button onclick="tables()">Print</button> <br>
+    <h3>check console</h3>
+    <script>
+        function print(){
+        for(i=0;i<10;i++){
+            if(i%2==0){
+                console.log(i);
+            }
+        }
+    }
+        function tables(){
+            var a = parseInt(document.getElementById("item").value);
+            for(i=1;i<=10;i++){
+                let c = i*a;
+                console.log(`${a} * ${i} = ${c}`);
+            }
+        }
+    </script>
+</body>
+</html>

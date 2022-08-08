@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+}
+h1{
+    background: #ccc;
+    padding: 10px;
+}
+p{
+    font-size: 20px;
+    color: plum;
+    background-color: black;
+}
+article{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 22px;
+    margin: 20px;
+}
+.link{
+    text-decoration: none;
+    padding: 10px;
+    background: #bef;
+    color: black;
+}
+button{
+    margin: 15px;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+.list{
+    border: 2px dashed black;
+    background: wheat;
+}
+ul li{
+    list-style-type: none;
+    text-transform: uppercase;
+}
