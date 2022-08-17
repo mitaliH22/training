@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .head{
+            font-size: 16px;
+            color: plum;
+        }
+        ul li{
+            list-style-type: none;
+            padding: 10px;
+        }
+        .dummyContent{
+            border-left: 2px solid rgba(89, 219, 255, 0.933);
+            height: 300px;
+        }
+        .child{
+            list-style-type: none;
+        }
+        .container{
+            border: 2px solid red;
+            padding: 30px;
+            margin-top: 50px;
+            text-transform: capitalize;
+            
+        }
+        .child{
+            padding-left: 20px;
+            padding-top: 20px; 
+            
+        }
+        .child li{
+            border-left: 2px solid black;
+            color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <pre></pre>
+    </div>
+<div class="dummyContent">
+    
+</div>
+
+
+
+<div class="test">
+    
+</div>
+<script type="text/javascript">
+    fetch('data.json')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        
+        //document.querySelector("pre").innerHTML = JSON.stringify(data,null,4);
+
+        let items = "";
+        let subItems = "";
+        data.children.forEach(function (item,index){
+            items += `<li> ${item.name} </li>`;
+            console.log(item,index);
+        })
+
+        data.children.forEach(function (item){
+            console.log(item)
+            var subItem = item.children.map(function (subItem){
+                subItems += `<li> ${subItem.name} </li>`;
+                console.log(subItem);
+            })
+            
+            
+        })
+        
+    
+    let dir = `<div class="details">
+        <p class="head">${data.name}</p>
+        <ul> ${items} <ol> ${subItems}</ol> </ul>
+        
+        </div>`;
+        
+    document.querySelector(".dummyContent").innerHTML = dir;
+
+         console.log(printChild(data.children))
+
+     let parentElement = ``;
+
+   parentElement+= `<div class="container">${data.name}`;
+
+parentElement+= printChild(data.children);
+
+   parentElement+= `</div>`;
+       document.querySelector(".test").innerHTML = parentElement;
+
+
+
+
+
+    }); // this is the end
+
+    function printChild(childrens){
+        var childData = ""
+            childrens?.map(node=>{
+                childData += `<li class="child"><div>${node.name}</div><ul>${printChild(node.children)}</ul></li>`
+            })
+        return childData
+    }
+    
+
+
+    // 1. lopp over main parents
+    // 2. function -> main parent k childs print-> Name
+    // 3. Name + call a new function childrens k name print honge
+    // 4. name + function se name print 
+
+//    dummy.forEach(function (item,index){
+//             items += `<li> ${item.name} </li>`;
+//             console.log(item,index);
+//             dummy.children.forEach(function (subItem, j){
+//                 subItems += `<li> ${subItem.name} </li>`;
+            
+//             console.log(subItem,index);
+//         })})
+</script>
+</body>
+</html>
+

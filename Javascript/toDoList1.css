@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+h1{
+    background: #ffadad;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5em;
+}
+.container{
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 6px;
+}
+.input-list{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.add-btn{
+    padding: 15px 30px;
+    font-family:'Courier New', Courier, monospace;
+    background: #ffebeb;
+    font-size: 16px;
+    border-radius: 50%;
+}
+#list{
+    list-style-type: square;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px; 
+}
+ul li{
+    padding: 10px;
+}
+
+.checked{
+    text-decoration: line-through;
+    font-style: italic;
+   
+}

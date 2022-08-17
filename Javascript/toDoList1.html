@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="toDoList.css">
+</head>
+<body>
+    <h1>To Do List</h1>
+    <div class="container">
+        <input type="text"  class="input-list"> 
+        <button class="add-btn">Add</button>
+        <div id="list"></div>
+    </div>
+    <script>
+        let list = document.getElementById("list");
+        function add() {
+            let value = document.querySelector(".input-list").value;
+            if(value == ""){
+                window.alert("Please enter the to do list item");
+            }else{
+            let listItem = document.createElement("input");
+            listItem.setAttribute("type", "checkbox");
+            let text = document.createTextNode(value);
+            listItem.appendChild(text);
+            list.appendChild(listItem);
+            document.querySelector(".input-list").value = "";
+        }}
+        list.addEventListener("click", function(event) {
+            if(event.target.tagName == "input"){
+                event.target.classList.toggle("checked");
+            }
+        })
+
+        const button = document.querySelector(".add-btn");
+        button.addEventListener("click",add);
+    </script>
+</body>
+</html>
