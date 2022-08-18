@@ -5,131 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <style>
-        .head{
-            font-size: 16px;
-            color: plum;
-        }
-        ul li{
-            list-style-type: none;
-            padding: 10px;
-        }
-        .dummyContent{
-            border-left: 2px solid rgba(89, 219, 255, 0.933);
-            height: 300px;
-        }
-        .child{
-            list-style-type: none;
-        }
-        .container{
-            border: 2px solid red;
-            padding: 30px;
-            margin-top: 50px;
-            text-transform: capitalize;
-            
-        }
-        .child{
-            padding-left: 20px;
-            padding-top: 20px; 
-            
-        }
-        .child li{
-            border-left: 2px solid black;
-            color: red;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="json.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <div>
-        <pre></pre>
-    </div>
-<div class="dummyContent">
-    
-</div>
+    <h1>JSON files</h1>
+    <div class="dummyContent"></div>
+    <div class="test"></div>
 
-
-
-<div class="test">
-    
-</div>
-<script type="text/javascript">
-    fetch('data.json')
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-        
-        //document.querySelector("pre").innerHTML = JSON.stringify(data,null,4);
-
-        let items = "";
-        let subItems = "";
-        data.children.forEach(function (item,index){
-            items += `<li> ${item.name} </li>`;
-            console.log(item,index);
-        })
-
-        data.children.forEach(function (item){
-            console.log(item)
-            var subItem = item.children.map(function (subItem){
-                subItems += `<li> ${subItem.name} </li>`;
-                console.log(subItem);
+    <script type="text/javascript">
+        fetch('./data.json')
+            .then(response => {
+                return response.json();
             })
-            
-            
-        })
-        
-    
-    let dir = `<div class="details">
-        <p class="head">${data.name}</p>
-        <ul> ${items} <ol> ${subItems}</ol> </ul>
-        
-        </div>`;
-        
-    document.querySelector(".dummyContent").innerHTML = dir;
+            .then(data => {       
+                let parentElement = ``;
+                for (var i = 0; i < data.length; i++) {
+                    parentElement+= `<div class="container"><p class='topHead'>
+                    <i class="${data[i].type==="directory"?'bi bi-folder-fill':'bi bi-file-earmark-fill'}"></i> ${data[i].name}</p>`;
 
-         console.log(printChild(data.children))
+                    parentElement+= '<ul class="list">'+printChild(data[i].children)+'</ul>';
 
-     let parentElement = ``;
+                    parentElement+= `</div>`;
+                    document.querySelector(".test").innerHTML = parentElement;
 
-   parentElement+= `<div class="container">${data.name}`;
+                    var contain = document.querySelectorAll(".container p");
+                    contain.forEach(function (c) {
+                        c.addEventListener("click",function(){
+                            this.parentElement.classList.toggle("active");
+                        })
+                    })
 
-parentElement+= printChild(data.children);
+                    let folders = document.querySelectorAll(".folder");                  
 
-   parentElement+= `</div>`;
-       document.querySelector(".test").innerHTML = parentElement;
+                    folders.forEach(function(folder){                    
+                        folder.addEventListener("click",function(){                        
+                            if(this.nextSibling.style.display === "none"){
+                                this.nextSibling.style.display = "block";
+                            }else{
+                                this.nextSibling.style.display = "none";
+                            }                        
+                        })
+                    })  
 
-
-
-
-
+                }
     }); // this is the end
 
     function printChild(childrens){
         var childData = ""
             childrens?.map(node=>{
-                childData += `<li class="child"><div>${node.name}</div><ul>${printChild(node.children)}</ul></li>`
+                childData += `<li class="child"><div class="folder"><i class="${node.type==="directory"?'bi bi-folder-fill':'bi bi-file-earmark-fill'}"></i> ${node.name}</div><ul>${printChild(node.children)}</ul></li>`
             })
         return childData
     }
-    
-
 
     // 1. lopp over main parents
     // 2. function -> main parent k childs print-> Name
     // 3. Name + call a new function childrens k name print honge
     // 4. name + function se name print 
-
-//    dummy.forEach(function (item,index){
-//             items += `<li> ${item.name} </li>`;
-//             console.log(item,index);
-//             dummy.children.forEach(function (subItem, j){
-//                 subItems += `<li> ${subItem.name} </li>`;
-            
-//             console.log(subItem,index);
-//         })})
-</script>
+    </script>
 </body>
 </html>
 

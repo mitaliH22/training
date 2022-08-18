@@ -7,12 +7,12 @@ console.log("about to fetch data");
           // below code only works with pre tag for that format
           // document.querySelector("pre").innerHTML = JSON.stringify(data,null,4);
           console.log(data);
-          const city = "<div>    <p> City = " + data.address.city + "</p>";
-          var listOfItems = "";
-          const some = [0, 15, 1546, 1687, 16874, 18564];
-          for (let i = 0; i < some.length; i++) {
-            listOfItems += `<li> ${some[i]}</li>`;
-          }
+          // const city = "<div><p> City = " + data.address.city + "</p>";
+          // var listOfItems = "";
+          // const some = [0, 15, 1546, 1687, 16874, 18564];
+          // for (let i = 0; i < some.length; i++) {
+          //   listOfItems += `<li> ${some[i]}</li>`;
+          // }
 
           let detailsOfAUser = `<div class="">
             <div class="details">
