@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1F2937;
+
+}
+h1{
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+.container {
+    width: 400px;
+    background: #EC4899;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todoList {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    align-items: center;
+    background: #ffffff;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.deleteTask {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30%;
+    align-items: center;
+    margin: 0;
+    padding: 5px 10px;
+}
+.editTask{
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30%;
+    align-items: center;
+    margin: 0;
+    padding: 5px 10px;
+}
+.pText {
+    background: #ffffff;
+    text-transform: capitalize;
+    border: none;
+}
+
+.inputvalue {
+    display: flex;
+    margin: 5px;
+}
+
+.inputVal {
+    width: 250px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 10px 20px;
+
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ccc;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline-style: none;
+    border-radius: 5px;
+
+}
