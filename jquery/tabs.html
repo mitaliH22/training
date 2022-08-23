@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Tabs functionality</title>
+    <style>
+        #tabs-1{
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 350px;
+            margin: 0 auto;
+        }
+        a{
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+            font-weight: bold;
+        }
+        ul li {
+            margin: 0 15px;
+            display: inline-block;
+            list-style-type: none;
+        }
+        #tabs-2{
+            background-color: plum;
+        }
+        #tabs-3{
+            background-color: chocolate;
+        }
+        #tabs-4{
+            background-color: red;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs-1").tabs();
+        });  
+    </script>
+
+</head>
+
+<body>
+    <div id="tabs-1">
+        <ul>
+            <li><a href="#tabs-2">Poem</a></li>
+            <li><a href="#tabs-3">Joke</a></li>
+            <li><a href="#tabs-4">Quote</a></li>
+        </ul>
+        <div id="tabs-2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam qui doloremque ab adipisci iste pariatur
+                omnis quidem vitae neque quae dolorem praesentium nulla sit voluptatibus at magni, natus accusantium
+                incidunt!</p>
+        </div>
+        <div id="tabs-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque animi odit explicabo recusandae
+                excepturi ex, officia, eligendi perferendis commodi aspernatur eaque modi libero consequatur quidem ad
+                maxime dolor temporibus veniam!</p>
+        </div>
+        <div id="tabs-4">
+            <p>" The whole secret of existence is to have no fear." </p>
+        </div>
+    </div>
+</body>
+
+</html>
