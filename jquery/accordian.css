@@ -7,17 +7,19 @@ html {
   scroll-behavior: smooth;
 }
 body{
-    min-height: 100vh;
-    background: plum;
+    background: rgb(255, 242, 255);
     font-size: larger;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
 }
+.heading{
+    margin: 50px;
+    font-style: italic;
+}
 div{
-    margin: 0 auto;
     width: 350px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
-    margin-top: 50px;
 }
 div h1{
     margin: 0;
@@ -25,4 +27,11 @@ div h1{
 div p{
     padding: 10px 15px;
     text-overflow: ellipsis;
+    margin-left: 0;
+}
+h3{
+    padding: 20px;
+}
+#accordion{
+    margin: 50px;
 }

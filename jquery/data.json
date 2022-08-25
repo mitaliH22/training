@@ -180,7 +180,8 @@
   ]
 },
  {
-   "name": "hi"
+   "name": "hi",
+   "type": "file"
  },
  {
    "name": "random data",

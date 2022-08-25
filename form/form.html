@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    <div>
+        <div class="parent-container">
+            <img src="img/form.png" alt="img">
+            <div class="child-container">
+                <h2>Registration Form</h2>
+                <form method="" name="registerForm" id="registerForm">
+                    <input type="text" placeholder="First Name" class="text-input" id="fname"> <br>
+                    <span class="error" id="fname_error"></span> <br>
+                    <input type="text" placeholder="Last Name" class="text-input" id="lname"> <br>
+                    <span class="error" id="lname_error"></span> <br>
+                    <input type="text" placeholder="Email" class="text-input" id="email"> <br>
+                    <span class="error" id="email_error"></span> <br>
+                    <input type="text" placeholder="Phone No." class="text-input" id="phone"> <br>
+                    <span class="error" id="phone_error"></span> <br>
+                    <input type="text" placeholder="Name on library card" class="text-input" id="libraryname"> <br>
+                    <span class="error" id="libraryname_error"></span> <br>
+                    <select name="gender" id="gender">
+                        <option value="gender">Select Gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="others">Others</option>
+                    </select> <br>
+                    <span class="error" id="gender_error"></span> <br>
+                    <span class="payment">
+                    <label>Payment Mode: </label>
+                    <input type="radio" name="payment" id="cash" value="Cash" class="radio">Cash
+                    <input type="radio" name="payment" id="card" value="CreditCard" class="radio">Credit Card <br>
+                    <span class="error" id="payment_error"></span> <br>
+                    </span>
+                    <input type="submit" value="Register" id="register">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="formjquery.js"></script>
+</body>
+</html>

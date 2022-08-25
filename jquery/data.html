@@ -6,31 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Javascript/json.css">
     <script src="jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("button").click(()=>{
-                $.ajax({
-                    url: "data.json",
-                    type: "GET",
-                    success: function(data){
-                        $.each(data, function(key,value){
-                            $("#json-data").append(key + " " + "Name: "+ value.name + " " + "Type: " +  value.type + "<br>");
-                        });
-                        
-
-                    }
-                })
-            })
-        })
-    </script>
 </head>
 
 <body>
+    <h1>Getting JSON data with the help of Jquery</h1>
+    <h3>Press the button below to get data</h3>
     <div id="json-data">
-
+        
     </div>
     <button>Get JSON data</button>
-</body>
+    <script>
+        $(document).ready(function () {
+            $("button").click(async ()=>{
+                var storedData = await $.ajax({
+                    url: "data.json",
+                    type: "GET",
+                    success: function(data){
+                       return data;
 
+                    }
+                })
+                // console.log(storedData);
+                $.each(storedData, function(key,value){
+                        $("#json-data").append("Name: "+ value.name + " " + "Type: " +  value.type +
+                        "<br>");
+                    });
+                
+            })
+        })
+    </script>
+</body>
 </html>

@@ -3,6 +3,7 @@ body{
     background-color: rgb(235, 234, 234);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    text-transform: capitalize;
 }
 h1{
     margin: 0;
@@ -47,4 +48,19 @@ ul li {
 }
 .folder+ ul{
     display: none;
+}
+button{
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-left: 30px;
+  background:rgb(211, 211, 255);
+  font-weight: bolder;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+#json-data{
+  padding:10px;
+  margin-bottom: 10px;
 }
