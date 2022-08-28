@@ -11,6 +11,9 @@ $(function(){
   var tabList = $(".tabs-li li"); 
   var tabContent = $(".coffe-cards");
 
+  $(".tabs").tabs();
+
+
   $(".slide-down").click(function(){
      $(".drop-down-slide-content").slideToggle("slow");
   })
