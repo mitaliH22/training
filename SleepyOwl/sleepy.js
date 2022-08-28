@@ -12,10 +12,11 @@ $(function(){
   var tabContent = $(".coffe-cards");
 
   $(".slide-down").click(function(){
-    $(".slide-down").hide();
      $(".drop-down-slide-content").slideToggle("slow");
-     $(".slide-down").show();
   })
 
+  $(".del-option").click(function(){
+    $(".footer-text").fadeOut("slow");
+  })
 });
 

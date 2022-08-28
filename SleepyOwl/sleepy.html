@@ -35,13 +35,20 @@
 
     <div class="slider-container">
       <div class="btn">
-        <span class="left-btn"> - </span>
-        <span class="right-btn"> + </span>
+        <span class="left-btn"> < </span>
+        <span class="right-btn"> > </span>
       </div>
       <div class="image-container">
         <div class="slide">
-          <img src="img/slide1.png" />
+          <img src="img/slide1-back.webp" alt="">
+          <img src="img/slide1.png" class="slide1-image" />
+          
         </div>
+      <div class="slide1-text">
+      <span> If you still haven't watched this </span>
+      <span><img src="img/slide1-text.webp" alt=""></span>
+      </div>
+
         <div class="slide">
           <img src="img/slide2.png" />
         </div>
@@ -476,10 +483,18 @@
         </div>
     </div>
 
-    <footer>
+    <div class="footer" >
         <span>© 2022 Sleepy Owl Coffee  </span>
         <a href="#"> Privacy </a>
         <a href="#"> Terms of Use</a>
+    </div >
+
+    <footer>
+      <div class="footer-text"> 
+        <img src="img/footer-ad.webp" alt="ad">
+        <p><span class="free-text">Free</span> instant coffee sampler pack with your order!</p>
+        <p class="del-option">X</p>
+      </div>
     </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
