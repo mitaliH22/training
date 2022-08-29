@@ -63,6 +63,7 @@ $("#tab1-section").show();
 
   $("#basket").click(() => {
     $(".basket-container").slideDown();
+    // $("body *").not("nav").css("filter","blur(5px)");
     if( $("#basket").attr('src','img/basket.png')){
       $("#basket").attr('src','img/x.png');
     }else{
