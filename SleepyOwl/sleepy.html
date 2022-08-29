@@ -18,6 +18,24 @@
     <!-- <link rel="stylesheet" href="slickthing.css"> -->
   </head>
   <body>
+    <div class="modal-container" id="modal_container">
+      <div class="modal">
+        
+      <img src="img/modal.jpg" alt="modal" class="modal-img">
+      <div class="modal-content">
+        <div id="close"> X </div>
+        <h1>Get 10% off</h1>
+        <p>Sign up to get great deals and an instant coupon for your next order.</p>
+        <input type="email" class="email-modal" placeholder="Enter Email">
+        <input type="tel" class="tel-modal" placeholder="Enter Mobile">
+        <button class="modal-btn">Sign up  </button>
+      </div>
+      </div>
+    </div>
+
+    <div class="basket-container">
+      <p>Got a coupon?</p>
+    </div>
     <nav>
       <div class="nav-logo">
         <img src="img/logo.avif" alt="sleepyOwl" />
@@ -28,10 +46,13 @@
         <li>bestseller</li>
         <li>kits&combos</li>
         <li>bulk orders</li>
-        <li><i class="bi bi-search"></i></li>
-        <li><i class="bi bi-basket2-fill"></i></li>
+        <li><img src="img/search.png" alt=""></li>
+        <li ><img src="img/basket.png" alt="" id="basket"></li>
+        <!-- <li><img src="img/x.png" alt="x" class="x-cart"></li> -->
       </ul>
+      
     </nav>
+    
 
     <div class="slider-container">
       <div class="btn">
@@ -53,19 +74,49 @@
         </div>
 
         <div class="slide">
-          <img src="img/slide2.png" />
+          <img src="img/slide2.png" class="slide2-image" />
+
+         <div class="slide-text slide2-text">
+          <img src="img/slide2-img.avif" alt="slide2" class="slide2-text-image">
+          <h1>Creamy & Bold <br> Cold Coffee</h1>
+          <button class="slide-btn">Shop cold coffee</button>
+         </div> 
         </div>
         <div class="slide">
           <img src="img/slide3.png" />
+
+          <div class="slide-text slide3-text">
+            <h1>You've Never Had it Like <br> This Before</h1>
+            <button class="slide-btn">Shop Instant coffee</button>
+          </div>
         </div>
         <div class="slide">
           <img src="img/slide4.png" />
+
+          <div class="slide-text slide4-text">
+            <p>Introducing</p>
+            <h1>Cold Coffee Kit</h1>
+            <button class="slide-btn">Shop now</button>
+          </div>
         </div>
         <div class="slide">
           <img src="img/slide5.png" />
+
+          <div class="slide-text slide5-text">
+            <h3>cold brew</h3>
+            <h1>take a trip around <br> the world</h1>
+            <button class="slide-btn">Try new flavours</button>
+
+          </div>
         </div>
         <div class="slide">
           <img src="img/slide6.png" />
+
+          <div class="slide-text slide6-text">
+            <h3>back in stock</h3>
+            <h1>premium instant kit</h1>
+            <button class="slide-btn">shop</button>
+          </div>
         </div>
       </div>
     </div>
@@ -139,15 +190,16 @@
 
         <div class="tabs">
           <ul class="tabs-li">
-            <li><a href="#tab1" data-content="tab1">instant coffe</a></li>
-            <li><a href="#tab2" data-content="tab2">cold brew</a></li>
-            <li><a href="#tab3" data-content="tab3">hot brew</a></li>
-            <li><a href="#tab4" data-content="tab4">merchandise</a></li>
+            <li><a href="#tab1" id="tab1">instant coffee</a></li>
+            <li><a href="#tab2" id="tab2">cold brew</a></li>
+            <li><a href="#tab3" id="tab3" >hot brew</a></li>
+            <li><a href="#tab4" id="tab4">merchandise</a></li>
           </ul>
 
-          <div id="tab1">
+          <div class="tab-section-container">
+          <div class="tab-section"  data-content="tab1" id="tab1-section">
             <div class="coffe-cards">
-              <img src="img/coffecard1.webp" style="width: 300px" />
+              <img src="img/coffecard1.webp" style="width: 350px" />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Premium Kit Hazelnut instant</h3>
@@ -160,7 +212,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/coffecard2.webp" style="width: 300px" />
+              <img src="img/coffecard2.webp" style="width: 350px" />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Instant Coffee Assorted Bundle</h3>
@@ -185,7 +237,7 @@
             </div>
           </div>
 
-          <div id="tab2">
+          <div class="tab-section" data-content="tab2">
             <div class="coffe-cards">
               <img src="img/coldbrew1.webp" style="width: 300px" />
               <div class="coffe-cards-detail">
@@ -224,7 +276,7 @@
             </div>
           </div>
 
-          <div id="tab3">
+          <div class="tab-section" data-content="tab3">
             <div class="coffe-cards">
               <img src="img/hotbrew1.webp" style="width: 300px" />
               <div class="coffe-cards-detail">
@@ -263,7 +315,7 @@
             </div>
           </div>
 
-          <div id="tab4">
+          <div class="tab-section" data-content="tab4">
             <div class="coffe-cards">
               <img src="img/merch1.webp" style="width: 300px" />
               <div class="coffe-cards-detail">
@@ -304,6 +356,8 @@
               </div>
             </div>
           </div>
+          </div>
+
         </div>
       </div>
 
@@ -506,7 +560,6 @@
 
     <footer>
       <div class="footer-text"> 
-        <img src="img/footer-ad.webp" alt="ad">
         <p><span class="free-text">Free</span> instant coffee sampler pack with your order!</p>
         <p class="del-option">X</p>
       </div>
