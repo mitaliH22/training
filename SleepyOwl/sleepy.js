@@ -101,7 +101,8 @@ $("#tab1").addClass("active-tab");
   // }) 
 
 
-  $(".shop").click(function(){
+  $(".shop").click(function(e){
+    e.preventDefault();
     $(".shop").toggleClass("mediaActive");
     $(".droplist").toggleClass("active");
     // if($(".shop").hasClass("mediaActive")){
