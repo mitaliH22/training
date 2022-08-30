@@ -35,25 +35,35 @@
 
     
     <nav>
+      <div class="navDrop">
       <div class="nav-logo">
         <img src="img/logo.avif" alt="sleepyOwl" />
       </div>
-      <ul class="nav-links">
-        <li>Shop</li>
+      <div style="display: flex; align-items: center; column-gap: 0.2em;" class="shop">
+        <img src="img/shopnav.png" alt="">
+         Shop
+          <img src="img/arrow-down.png" alt="" width="20px">
+      </div>
+      <ul class="nav-links" id="navLinks">
+        
+        <div class="droplist">
         <li style="display: flex; align-items: center;"><img src="img/instant-coffee-nav.png" alt="instant-coffee-nav"> instant coffee</li>
         <li>bestseller</li>
         <li>kits&combos</li>
         <li>bulk orders</li>
+        </div>
         <li><img src="img/search.png" alt=""></li>
-        <li ><img src="img/basket.png" alt="" id="basket"></li>
+        <li class="img-swap"><img src="img/basket.png" alt="" id="basket"></li>
         <!-- <li><img src="img/x.png" alt="x" class="x-cart"></li> -->
       </ul>
-      
+      </div>
     </nav>
     <div class="basket-container">
       <p>Your cart is currently empty.</p>
     </div>
 
+
+<div class="body-section">    
     <div class="slider-container">
       <div class="btn">
         <span class="left-btn"> < </span>
@@ -145,45 +155,45 @@
       <div class="section-img">
         <a href="#">
           <img src="img/overlay1.png" alt="overlay1" />
-          <div class="overlay1-text">100% Arabica Premium Instant Coffee</div>
+          <div class="overlay1-text">100% Arabica Premium Instant Coffee <img src="img/overlay1A.png" alt="" class="overlay1-icon"></div>
         </a>
         <a href="#">
           <img src="img/overlay2.png" alt="overlay2" />
-          <div class="overlay2-text">Instant Coffee Kit-Meets All Your caffeine Needs</div>
+          <div class="overlay2-text">Instant Coffee Kit-Meets All Your caffeine Needs <img src="img/overlay2A.png" alt="" class="overlay2-icon"></div>
         </a>
       </div>
       <div class="detail-images">
         <div class="detail-image-item">
           <a href="#"><img src="img/c1.webp" />
-          <div class="c-text c1-text">Hot Brew-Ready in 5 Minutes</div>
+          <div class="c-text c1-text">Hot Brew-Ready in 5 Minutes <img src="img/icon1.png" alt="" class="overlay1-icon"></div>
         </a>
         </div>
         <div class="detail-image-item">
           <a href="#"><img src="img/c2.webp" />
-          <div class="c-text c2-text">Cold brew at Home</div>
+          <div class="c-text c2-text">Cold brew at Home <img src="img/icon2.png" alt="" class="overlay1-icon"></div>
           </a>
         </div>
         <div class="detail-image-item">
           <a href="#"><img src="img/c3.webp" />
-          <div class="c-text c3-text">Signature Arabica Coffee Beans</div>
+          <div class="c-text c3-text">Signature Arabica Coffee Beans <img src="img/icon3.png" alt="" class="overlay1-icon"></div>
           </a>
         </div>
         <div class="detail-image-item">
           <a href="#"><img src="img/c4.webp" />
-          <div class="c-text c4-text">Merchandise that Travels</div></a>
+          <div class="c-text c4-text">Merchandise that Travels <img src="img/icon4.png" alt="" class="overlay1-icon"></div></a>
         </div>
         <div class="detail-image-item">
           <a href="#"><img src="img/c5.webp" />
-          <div class="c-text c5-text">Iced Coffee made with Cold Brew</div></a>
+          <div class="c-text c5-text">Iced Coffee made with Cold Brew <img src="img/icon5.png" alt="" class="overlay1-icon"></div></a>
         </div>
         <div class="detail-image-item">
           <a href="#"><img src="img/c6.webp" />
-          <div class="c-text c6-text">Filter Coffee that Packs a Punch</div>
+          <div class="c-text c6-text">Filter Coffee that Packs a Punch <img src="img/icon6.png" alt="" class="overlay1-icon"> </div>
           </a>
         </div>
       </div>
 
-      <div class="tabs-container">
+      <div class="tabs-container" style="max-width: 100%;">
         <div class="tabs-heading">
           <h2>Bestseller</h2>
         </div>
@@ -199,7 +209,7 @@
           <div class="tab-section-container">
           <div class="tab-section"  data-content="tab1" id="tab1-section">
             <div class="coffe-cards">
-              <img src="img/coffecard1.webp" style="width: 350px" />
+              <img src="img/coffecard1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Premium Kit Hazelnut instant</h3>
@@ -212,7 +222,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/coffecard2.webp" style="width: 350px" />
+              <img src="img/coffecard2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Instant Coffee Assorted Bundle</h3>
@@ -226,7 +236,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/coffecard3.webp" style="width: 300px" />
+              <img src="img/coffecard3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Instant Flavour Bomb + Mug</h3>
@@ -239,7 +249,7 @@
 
           <div class="tab-section" data-content="tab2">
             <div class="coffe-cards">
-              <img src="img/coldbrew1.webp" style="width: 300px" />
+              <img src="img/coldbrew1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>French Vanilla Cold Brew</h3>
@@ -249,7 +259,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/coldbre2.webp" style="width: 300px" />
+              <img src="img/coldbre2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Emirates Blend</h3>
@@ -262,7 +272,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/coldbrew3.webp" style="width: 300px" />
+              <img src="img/coldbrew3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Irish Cream</h3>
@@ -278,7 +288,7 @@
 
           <div class="tab-section" data-content="tab3">
             <div class="coffe-cards">
-              <img src="img/hotbrew1.webp" style="width: 300px" />
+              <img src="img/hotbrew1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Assorted Hot Brew</h3>
@@ -288,7 +298,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/hotbrew2.webp" style="width: 300px" />
+              <img src="img/hotbrew2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Original</h3>
@@ -301,7 +311,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/hotbrew3.webp" style="width: 300px" />
+              <img src="img/hotbrew3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Mocha Hot Brew</h3>
@@ -317,7 +327,7 @@
 
           <div class="tab-section" data-content="tab4">
             <div class="coffe-cards">
-              <img src="img/merch1.webp" style="width: 300px" />
+              <img src="img/merch1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Travel Mug</h3>
@@ -330,7 +340,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/merch2.webp" style="width: 300px" />
+              <img src="img/merch2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>Ceramic Mug</h3>
@@ -343,7 +353,7 @@
               </div>
             </div>
             <div class="coffe-cards">
-              <img src="img/merch3.webp" style="width: 300px" />
+              <img src="img/merch3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
                   <h3>French Press</h3>
@@ -564,6 +574,8 @@
         <p class="del-option">X</p>
       </div>
     </footer>
+
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 

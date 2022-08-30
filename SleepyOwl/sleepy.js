@@ -35,12 +35,21 @@ $(function(){
  
 $(".tab-section").hide();
 $("#tab1-section").show();
-  $(".tabs-li a").on("click", function () {
+$("#tab1").addClass("active-tab");
+  $(".tabs-li a").on("click", function (e) {
+    e.preventDefault();
     var target = $(this).attr("id");
-    $(".tabs-li li a").addClass("active-tab");
+    // console.log(target);
+    $(".tabs-li a").removeClass("active-tab");
+    $(this).addClass("active-tab");
+   
     $(".tab-section").hide();
     $("[data-content=" + target + "]").fadeIn("slow");
+    
   });
+
+
+
 
   var modal_container = document.getElementById("modal_container");
   var close = document.getElementById("close");
@@ -60,18 +69,47 @@ $("#tab1-section").show();
   //   $(".x-cart").show();
   // })
 
-
-  $("#basket").click(() => {
-    $(".basket-container").slideDown();
-    // $("body *").not("nav").css("filter","blur(5px)");
-    if( $("#basket").attr('src','img/basket.png')){
-      $("#basket").attr('src','img/x.png');
+  var toggle = true;
+  let img = document.getElementById("basket");
+  img.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggle = !toggle;
+    if(toggle) {
+      img.src = "img/basket.png";
+      $(".basket-container").slideUp();
+      $(".body-section").css({"filter": "","padding": ""});
+      
     }else{
-      $("#basket").attr("src", "img/basket.png");
+      img.src = "img/x.png";
+      $(".basket-container").slideDown();
+      $(".body-section").css("filter" , "blur(8px)");
+      
     }
-  }) 
+
+  })
+
+  // $("#basket").click(() => {
+  //   $(".basket-container").slideDown();
+  //   // $("body *").not(".nav-links").css("filter","blur(5px)");
+  //   // $("body").not(".nav-links").css("filter", "blur(3px)");
+  //   $(".body-section").css("filter", "blur(20px)");
+  //   if( $("#basket").attr('src','img/basket.png')){
+  //     $("#basket").attr('src','img/x.png');
+  //   }else{
+  //     $("#basket").attr("src", "img/basket.png");
+  //   }
+  // }) 
 
 
+  $(".shop").click(function(){
+    $(".shop").toggleClass("mediaActive");
+    $(".droplist").toggleClass("active");
+    // if($(".shop").hasClass("mediaActive")){
+    //   $(".droplist").slideDown("slow");
+    // }
+    // $(".droplist").slideDown("slow");
+
+})
 
 
 });
