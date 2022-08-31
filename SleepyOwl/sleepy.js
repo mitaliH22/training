@@ -88,30 +88,79 @@ $("#tab1").addClass("active-tab");
 
   })
 
-  // $("#basket").click(() => {
-  //   $(".basket-container").slideDown();
-  //   // $("body *").not(".nav-links").css("filter","blur(5px)");
-  //   // $("body").not(".nav-links").css("filter", "blur(3px)");
-  //   $(".body-section").css("filter", "blur(20px)");
-  //   if( $("#basket").attr('src','img/basket.png')){
-  //     $("#basket").attr('src','img/x.png');
-  //   }else{
-  //     $("#basket").attr("src", "img/basket.png");
-  //   }
-  // }) 
-
-
+  
   $(".shop").click(function(e){
     e.preventDefault();
     $(".shop").toggleClass("mediaActive");
-    $(".droplist").toggleClass("active");
-    // if($(".shop").hasClass("mediaActive")){
-    //   $(".droplist").slideDown("slow");
-    // }
-    // $(".droplist").slideDown("slow");
+    $(".droplist").toggleClass("actives");
+    $(".droplist").slideToggle("slow");
 
 })
 
+$(window).resize(function(){
+
+  var width = $(window).width();
+      if (width <= 888) {
+        $(".newspaper-list").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1000,
+          prevArrow: "",
+          nextArrow: "",
+        });
+      }
+
+
+})
+//    var widthh = $(window).width();
+//   console.log(widthh);
+//    if(widthh <= 768) {
+//     $(".detail-images:not(.slick-initialized)").slick({
+//       dots: false,
+//       infinite: true,
+//       slidesToShow: 3,
+//       slidesToScroll: 3,
+//       prevArrow: ".left-btn-detail",
+//       nextArrow: ".right-btn-detail",
+//     });
+//    }else{
+//     console.log("hi");
+//    }
+
+// $(window).resize(function(){
+
+
+   
+// })
+
+  $(".detail-images:not(.slick-initialized)").slick({
+    infinite: true,
+    speed: 300,
+     prevArrow: ".left-btn-detail",
+      nextArrow: ".right-btn-detail",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          prevArrow: ".left-btn-detail",
+          nextArrow: ".right-btn-detail",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+
+  
 
 });
 

@@ -158,6 +158,26 @@ nav {
   border-radius: 50%;
   top: 400px;
 }
+.left-btn-detail,.right-btn-detail {
+   background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bolder;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  top: 25%;
+}
+.left-btn-detail{
+  left: 10%;
+}
+.right-btn-detail{
+  right: 10%;
+}
+.detail-image-btn{
+  display: none;
+}
 .right-btn {
   right: 20px;
 }
@@ -170,6 +190,7 @@ nav {
   padding: 30px;
   column-gap: 40px;
   row-gap: 30px;
+  
 }
 .detail-image-item {
   position: relative;
@@ -494,8 +515,8 @@ a {
   opacity: 0;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
    background: rgba(0, 0, 0, 0.34);
   display: flex;
   justify-content: center;
@@ -514,7 +535,10 @@ a {
   max-width: 100%;
   text-align: center;
   position: absolute;
-  left: 450px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateX(-35%);
 }
 .modal-btn{
     background: rgb(0, 10, 55);
@@ -691,6 +715,7 @@ ul{
   padding-left:0;
 }
 
+
 @media screen and (max-width: 1024px) and (min-width: 992px) {
   .slide1-button{
     bottom: 20px;
@@ -787,17 +812,46 @@ ul{
     justify-content: space-between;
     align-items: flex-start;
 }
+  .droplist.actives{
+
+    
+}
   nav{
     display: block;
   }
   .droplist{
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: rgb(255, 255, 255);
+    flex-direction: column;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   .shop.mediaActive{
     left: 0;
     right: 0;
     justify-content: center;
   }
+  .detail-image-btn{
+  display: block;
+}
+.detail-images{
+  width:600px;
+}
+.c-text{
+  font-size: 15px;
+  line-height:20px;
+  padding: 8px;
+  width: 50%;
+  top: 3px;
+}
+.section-img{
+  display: none;
+}
   
 }
 @media screen and (max-width:991px) and (min-width: 889px) {
@@ -931,6 +985,7 @@ ul{
   }
   .c-text{
     font-size: 25px;
+    padding: 5px;
   }
   .tabs-heading{
     font-size: 30px;
@@ -945,6 +1000,9 @@ ul{
     flex-wrap: wrap;
     padding: 64px 60px;
   }
+  .footer-text{
+    font-size: 15px;
+  }
 .gallery-content p{
   font-size: 23px;
 }
@@ -958,4 +1016,188 @@ ul{
 .nav-links li{
   font-size: 10px;
 }
+.modal{
+  width: 300px;
+}
+.newspaper-list li img{
+  height:25px;
+}
+.coffe-cards-detail{
+  font-size: 14px;
+}
+.review-img{
+  height:400px;
+}
+.review-msg{
+  width:400px;
+}
+.slide-down-content img{
+  width:400px
+}
+}
+@media  only screen and (max-width: 799px) and (min-width: 769px){ 
+  .navDrop, .tabs-li, .review, .slide-down-content{
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 15px;
+  }
+  .slide-down-content{
+    flex-direction: column-reverse;
+  }
+  .slide-down-content img{
+    width: 300px;
+  }
+  .drop-down-content{
+    font-size: 14px;
+  }
+  .gallery-content p{
+    font-size: 20px;
+    margin: 0;
+  }
+  .coffe-cards-detail{
+    font-size: 14px;
+  }
+  .c-text{
+    top: 15px;
+    font-size: 20px;
+    padding: 4px;
+    line-height: 23px;
+  }
+  .overlay1-icon, .overlay2-icon{
+    width: 15px !important;
+  }
+  .overlay1-text, .overlay2-text{
+    font-size: 15px;
+    width: 150px;
+  }
+  .overlay1-text{
+    left:180px; 
+  }
+  .tab-section{
+    flex-wrap: wrap;
+    row-gap:20px;
+  }
+  .slide1-text img{
+    height:30px;
+  }
+  .slide1-text{
+    top: 40px;
+    font-size: 20px;
+  }
+  .slide1-image{
+    top: 90px;
+  }
+  .slide1-button{
+    bottom: 50px;
+  }
+  .right-btn, .left-btn{
+    bottom: 40px;
+    top: unset;
+  }
+  .left-btn{
+    right: 70px;
+    left: unset;
+  }
+  .slide2-text{
+    top: 10px;
+  }
+  .slide2-text h1{
+    margin: 0;
+    font-size: 25px;
+  }
+  .slide-btn{
+    padding: 15px;
+    font-size: 10px;
+  }
+  .slide3-text{
+    font-size: 10px;
+    bottom: 12px;
+  }
+  .slide4-text{
+    top: 30px;
+  }
+  .slide4-text h1{
+    margin: 0;
+    font-size: 35px;
+  }
+  .slide5-text h1, .slide6-text h1{
+    font-size: 20px;
+    margin: 0;
+  }
+  .slide5-text{
+    top: 30px;
+  }
+  .del-option{
+    padding: unset;
+  }
+  .footer-text{
+    font-size: 15px;
+    justify-content:space-evenly;
+  }
+  .foot-links{
+    flex-wrap: wrap;
+  }
+  footer{
+    display: block;
+  }
+  .review-msg p{
+    margin: 0;
+    font-size: 23px;
+  }
+  .review-msg{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 668px)  {
+  .tab-section{
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: auto auto;
+  }
+  #tab1, #tab2, #tab3, #tab4{
+    margin: 0;
+    font-size:15px;
+  }
+  .right-btn-detail{
+    right: 9%;
+  }
+  .left-btn-detail{
+    left: 13%;
+  }
+  .left-btn-detail , .right-btn-detail{
+    top: 23%;
+    padding: 5px 15px;
+  }
+  .detail-image-item{
+    padding-left: 40px;
+  }
+  .slide1-text img {
+    height: 40px;
+}
+  .slide1-text{
+    top: 20px;
+    font-size: 20px;
+  }
+  .slide1-image{
+    top: 70px;
+  }
+  .slide1-button{
+    bottom: 50px;
+  }
+  .right-btn, .left-btn{
+    top: unset;
+    bottom: 30px;
+  }
+  .left-btn{
+    right: 70px;
+    left: unset;
+  }
+  .foot-links{
+    flex-wrap: wrap;
+  }
 }
