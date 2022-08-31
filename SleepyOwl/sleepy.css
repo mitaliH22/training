@@ -852,7 +852,15 @@ ul{
 .section-img{
   display: none;
 }
-  
+.foot-links{
+  flex-wrap: wrap;
+}
+  .review{
+    flex-direction: column;
+  }
+  .review-img{
+    height: 400px;
+  }
 }
 @media screen and (max-width:991px) and (min-width: 889px) {
   .slide1-text img{
