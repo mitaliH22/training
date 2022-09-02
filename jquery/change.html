@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  padding: 5em 2em;
+}
+#element{
+  font-size: 3em;
+}
+#changeText{
+  top: 170px;
+  left: 20px;
+  position:fixed;
+  z-index:999;
+  font-size: 1em;
+  padding: 10px 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="element">
+  Hi there
+</div>
+
+<button id="changeText">Replace Text</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        const changeText = (e) => {
+  const element = $("#element");
+  const textToReplace = element.text();
+  const newText = textToReplace.replace("Hi", "<input type='text'>");
+  element.text(newText);
+};
+
+$(document).on('click', '#changeText', changeText);
+    </script>
+</body>
+</html>

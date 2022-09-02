@@ -39,26 +39,168 @@
       <div class="nav-logo order-item">
         <img src="img/logo.avif" alt="sleepyOwl" />
       </div>
-      <div style="display: flex; align-items: center; column-gap: 0.2em;" class="shop order-item">
+      <!-- <div style="display: flex; align-items: center; column-gap: 0.2em;" class="shop order-item">
         <img src="img/shopnav.png" alt="">
          Shop
-      </div>
-      <ul class="nav-links order-item" id="navLinks">
-        
-        <div class="droplist">
-        <li style="display: flex; align-items: center;"><img src="img/instant-coffee-nav.png" alt="instant-coffee-nav"> instant coffee</li>
-        <li>bestseller</li>
-        <li>kits&combos</li>
-        <li>bulk orders</li>
-        </div>
-        <li><img src="img/search.png" alt=""></li>
-        <li class="img-swap"><img src="img/basket.png" alt="" id="basket"></li>
-        <!-- <li><img src="img/x.png" alt="x" class="x-cart"></li> -->
+      </div> -->
+      <ul class="nav-links" id="navLinks">
+        <li class="order-item">
+        <div style="display: flex; align-items: center; column-gap: 0.2em;" class="shop ">
+        <img src="img/shopnav.png" alt="">
+         Shop
+         <span class="arrow"></span>
+        </div></li>
+        <li class="instantCoffee responsiveHide">
+        <img src="img/instant-coffee-nav.png" alt="instant-coffee-nav"> instant coffee</li>
+        <li class="responsiveHide">bestseller</li>
+        <li class="responsiveHide">kits&combos</li>
+        <li class="responsiveHide">bulk orders</li>
+        </li>
+        <li class="order-item"><img src="img/search.png" alt=""></li>
+        <li class="img-swap order-item"><img src="img/basket.png" alt="" id="basket"></li>
       </ul>
       </div>
     </nav>
+
+    <div class="demo"> 
+      <div class="leftDemo">
+      <img src="img/shop.webp" alt="" class="shopNow">
+      <div class="TopshopBar shopBar">
+        <a href="">Login . Sign Up</a>
+      </div>
+      
+      <div class="shopList">
+        <div class="shopListItem">
+          <a href="">Bulk Orders</a>
+        </div>
+        <div class="shopListItem">
+          <a href="">Blog</a>
+        </div>
+        <div class="shopListItem">
+          <a href="">Subscribe</a>
+        </div>
+        <div class="shopListItem">
+          <a href="">Reviews</a>
+        </div>
+        <div class="shopListItem">
+          <a href="">contact us </a>
+        </div>
+      </div>
+      </div>
+      <div class="rightDemo">
+        <div class="TopItem">
+          <img src="img/Mask_Group_38.webp" alt="">
+          <div class="TopItemContent">
+          <a href="">Deal of the Week</a>
+          <p>Blink and you'll miss it.</p>
+          </div>
+        </div>
+
+        <div class="rightList">
+          <div class="rightListContent">
+            <img src="img/shopBar1.avif" alt="">
+            <div class="rightListData">
+              <a href="">Cold Coffee Cans</a>
+              <p>Kick off the summer right.</p>
+            </div>
+          </div>
+          <div class="rightListContent">
+            <img src="img/shopBar2.avif.webp" alt="">
+            <div class="rightListData">
+              <a href="">Cold Coffee Cans</a>
+              <p>Kick off the summer right.</p>
+            </div>
+          </div>
+          <div class="rightListContent">
+            <img src="img/shopBar1.avif" alt="">
+            <div class="rightListData">
+              <a href="">Cold Coffee Cans</a>
+              <p>Kick off the summer right.</p>
+            </div>
+          </div>
+          <div class="rightListContent">
+            <img src="img/shopBar2.avif.webp" alt="">
+            <div class="rightListData">
+              <a href="">Cold Coffee Cans</a>
+              <p>Kick off the summer right.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="basket-container">
-      <p>Your cart is currently empty.</p>
+      <div class="basket-item">
+        <img src="img/merch1.webp" alt="" style="max-width:90px">
+        <div class="basket-item-content">
+        <a href="#" class="basket-item-name">Enamel Mug</a>
+        <p class="basket-item-detail">Classic Blue  . 1 Mug</p>
+        <div class="basket-item-credit">
+          <span>₹475</span>
+          <div class="quantity">
+          <button type="button" id="sub" class="sub">-</button>
+          <input type="text" id="1" value="1" min="1" max="3" />
+          <button type="button" id="add" class="add">+</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="basket-coupon">
+        <div class="coupon">
+        <img src="img/discount.jpg" alt="">
+        <p>Got a coupon?</p>
+        </div>
+        <div class="coupon-link">
+          <a href="#" id="discount">Tap to add a discount</a>
+        </div>
+      </div>
+
+      <div class="basket-addOn">
+        <p style="color:#6E7B8F; padding-left: 15px;">You'll love these too-</p>
+        <div class="addOnFlex">
+
+        <div class="addOnItem">
+          <button class="addOnItemBtn"> + </button>
+          <img src="img/merch2.webp" alt="">
+          <p class="addOnDetail">merchandise</p>
+          <a href="#">Enamel Mug</a>
+          <p class="price">₹1,425 <s>₹1,675</s></p>
+          <!-- <button class="addOn">+</button> -->
+        </div>
+        <div class="addOnItem">
+          <button class="addOnItemBtn"> + </button>
+          <img src="img/merch3.webp" alt="">
+          <p class="addOnDetail">merchandise</p>
+          <a href="#">Enamel Mug</a>
+          <p class="price">₹475</p>
+        </div>
+
+        <div class="addOnItem">
+          <button class="addOnItemBtn"> + </button>
+          <img src="img/merch3.webp" alt="">
+          <p class="addOnDetail">merchandise</p>
+          <a href="#">Enamel Mug</a>
+          <p class="price">₹475</p>
+        </div>
+
+        <div class="addOnItem">
+          <button class="addOnItemBtn"> + </button>
+          <img src="img/merch3.webp" alt="">
+          <p class="addOnDetail">merchandise</p>
+          <a href="#">Enamel Mug</a>
+          <p class="price">₹475</p>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="addOnfooter">
+        <span>checkout</span>
+        <span>₹475</span>
+      </div>
+      <!-- <p>Your cart is currently empty.</p> -->
     </div>
 
     <header class="scroll-header" id="scroll_header">
@@ -224,7 +366,9 @@
 
           <div class="tab-section-container">
           <div class="tab-section"  data-content="tab1" id="tab1-section">
+            
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coffecard1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -238,6 +382,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coffecard2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -252,6 +397,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coffecard3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -265,6 +411,7 @@
 
           <div class="tab-section" data-content="tab2">
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coldbrew1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -275,6 +422,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coldbre2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -288,6 +436,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/coldbrew3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -304,6 +453,7 @@
 
           <div class="tab-section" data-content="tab3">
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/hotbrew1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -314,6 +464,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/hotbrew2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -327,6 +478,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/hotbrew3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -343,6 +495,7 @@
 
           <div class="tab-section" data-content="tab4">
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/merch1.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -356,6 +509,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/merch2.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
@@ -369,6 +523,7 @@
               </div>
             </div>
             <div class="coffe-cards">
+              <button class="addOnItemBtn"> +ADD </button>
               <img src="img/merch3.webp"  />
               <div class="coffe-cards-detail">
                 <div style="display: flex">
