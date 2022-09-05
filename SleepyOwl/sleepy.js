@@ -90,12 +90,24 @@ $("#tab1").addClass("active-tab");
     }
   })
 
-
-$(".shop").on("click", function () {
+ $(".shop").on("click",()=>{
   $(this).toggleClass("active");
-  $(".demo").toggleClass("shopActive");
-  
-});
+  toggle = !toggle;
+  if(toggle){
+    $(".demo").slideUp();
+  }else{
+    $(".demo").addClass("shopActive");
+    $(".demo").slideDown();
+
+    $(".body-section").click(()=>{
+      $(".demo").slideUp();
+    })
+  }
+ }) 
+
+
+
+
 
   $(".newspaper-list:not(.slick-initialized)").slick({
     infinite: true,
