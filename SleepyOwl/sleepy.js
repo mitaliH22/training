@@ -1,11 +1,13 @@
 $(function(){
-  $(".image-container").not('.slick-initialized').slick({
+  $(".image-container").not(".slick-initialized").slick({
     dots: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     prevArrow: ".left-btn",
     nextArrow: ".right-btn",
+    fade: true,
+    cssEase: "linear",
   });
   
   var tabList = $(".tabs-li li"); 
@@ -16,7 +18,13 @@ $(function(){
 
   $(".slide-down").click(function(){
      $(".drop-down-slide-content").slideToggle("slow");
+     $(".slide-down").slideToggle("slow");
   })
+
+  $(".slide-down-active").click(()=>{
+     $(".slide-down").slideToggle("slow");
+    $(".drop-down-slide-content").slideToggle("slow");
+  });
 
   $(".del-option").click(function(){
     $(".footer-text").fadeOut("slow");
@@ -67,7 +75,9 @@ $("#tab1").addClass("active-tab");
 
   var toggle = true;
   let img = document.getElementById("basket");
-  img.addEventListener("click", (e) => {
+  img.addEventListener("click", toggleImg)
+
+  function toggleImg(e){
     e.preventDefault();
     toggle = !toggle;
     if(toggle) {
@@ -76,9 +86,17 @@ $("#tab1").addClass("active-tab");
       $(".body-section").css({"filter": "","padding": ""});
       
     }else{
+      $(".demo").slideUp();
       img.src = "img/x.png";
       $(".basket-container").slideDown();
       $(".body-section").css("filter" , "blur(8px)");
+      $(".shop").click(()=>{
+         $(".demo").addClass("shopActive");
+         $(".demo").slideDown();
+         img.src = "img/basket.png";
+         $(".basket-container").slideUp();
+         $(".body-section").css({ "filter": "", "padding": "" });
+      })
       $(".body-section").click(()=>{
         if($(".body-section").css("filter" , "blur(8px)")){
           img.src = "img/basket.png";
@@ -88,7 +106,8 @@ $("#tab1").addClass("active-tab");
       })
       
     }
-  })
+  }
+  
 
  $(".shop").on("click",()=>{
   $(this).toggleClass("active");
@@ -102,8 +121,11 @@ $("#tab1").addClass("active-tab");
     $(".body-section").click(()=>{
       $(".demo").slideUp();
     })
-  }
- }) 
+
+   $("#basket").on("click",toggleImg)
+  
+}
+} ) 
 
 
 
@@ -165,14 +187,15 @@ $(".tab-section:not(.slick-initialized)").slick({
 
 
   $(".detail-images:not(.slick-initialized)").slick({
+    dots: true,
     infinite: true,
     speed: 200,
-     prevArrow: "",
-      nextArrow: "",
-      variableWidth: true,
-      autoplay: true,
-      mobileFirst: true,
-      slidesToShow: 3,
+    prevArrow: "",
+    nextArrow: "",
+    variableWidth: true,
+    autoplay: true,
+    mobileFirst: true,
+    slidesToShow: 3,
     responsive: [
       {
         breakpoint: 1024,
