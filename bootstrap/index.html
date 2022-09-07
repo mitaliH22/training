@@ -9,109 +9,132 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-   <nav class="navbar bg-light p-2">
-  <div class="container-fluid">
-    <a class="navbar-brand Top ">Re<span class="textYellow">vision</span></a>
-    <form class="d-flex" role="search">
-      <ul class="row list-inline  align-middle Navtext">
-        <li class="col">Home</li>
-        <li class="col">Features</li>
-        <li class="col">Blog</li>
-        <li class="col">Portfolio</li>
-        <li class="col">Contact</li>
-        <li class="col">Purchase</li>
+   <nav class="navbar bg-light p-2 navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand Top">Re<span class="textYellow">vision</span></a>
+
+    <button class="navbar-toggler" type="button"
+    data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto Navtext">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
-    </form>
+    </div>
   </div>
 </nav>
-<div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active slider p-5 ">
-     <h1>We Believe in quality design</h1>
-     <p class="text-white">Any creative project is unique and should be provided with
-        the appropriate quality.</p>
-     <img src="img/top.png" alt="top" class="img-fluid slider1Img">
-    </div>
-    <div class="carousel-item slider p-5">
+
+<section class="bg-warning text-dark p-2 text-center text-md-start">
+  <div class="container">
+    <div class="d-md-flex align-items-center justify-content-between">
+      <div>
         <h1>We Believe in quality design</h1>
-     <p class="text-white">Any creative project is unique and should be provided with
+        <p class="text-light lead my-4">
+        Any creative project is unique and should be provided with
         the appropriate quality.</p>
-      <img src="img/two.jpg" class="img-fluid slider1Img" alt="...">
-    </div>
-    <div class="carousel-item slider p-5">
-        <h1>We Believe in quality design</h1>
-     <p class="text-white">Any creative project is unique and should be provided with
-        the appropriate quality.</p>
-      <img src="img/one.jpg" class="img-fluid slider1Img" alt="...">
+        <button class="btn btn-light rounded-0">
+          Purchase Now
+        </button>
+
+      </div>
+      <img src="img/top.png" alt="" class="img-fluid">
     </div>
   </div>
-  
-</div>
+</section>
+
+<section class="p-5">
 <div class="container text-left">
   <div class="row p-5">
-    <div class="col">
+    <div class="col-md">
         <div class="headingItem">
-      <i class="bi bi-arrow-right-circle-fill"></i> Responsive Design
+          <span class="h2"><i class="bi bi-arrow-right-circle-fill"></i></span>
+       Responsive Design
       </div>
       <p>Easy reading and navigation, panning, and scrolling -across a wide range
         of devices (from desktop computer monitors to mobile devices).
       </p>
     </div>
-    <div class="col">
+    <div class="col-md">
         <div class="headingItem">
-     <i class="bi bi-pause-circle-fill"></i> Revolution SLider
+          <span class="h2"><i class="bi bi-pause-circle-fill"></i></span>
+      Revolution Slider
      </div>
      <p>Turn simple html markup into a responsive(mobile friendly) or 
         fullwidth slider with must-see-effects and meanwhile keep or build your SEO.
      </p>
     </div>
-    <div class="col">
+    <div class="col-md">
         <div class="headingItem">
-      <i class="bi bi-skip-start-circle-fill"></i> Wide Range
+        <span class="h2"><i class="bi bi-skip-start-circle-fill"></i></span>
+       Wide Range
       </div>
       <p>One of the awesome features of revision html is a wide range of color skins and abilityto use backgrounf images</p>
     </div>
   </div>
 </div>
+</section>
+
 <div class="container p-5">
-  <div class="row g-0">
-    <div class="col">
-      <img src="img/one.jpg" alt="" srcset="">
+  <div class="row row-cols-2 row-cols-4 g-0">
+    <div class="col ">
+      <img src="img/one.jpg" alt="" class="img-fluid">
     </div>
     <div class="col">
-      <img src="img/two.jpg" alt="" srcset="">
+      <img src="img/two.jpg" alt="" class="img-fluid">
     </div>
     <div class="col">
-      <img src="img/three.jpg" alt="" srcset="">
+      <img src="img/three.jpg" alt="" class="img-fluid">
     </div>
     <div class="col">
-            <img src="img/four.jpg" alt="" srcset="">
+            <img src="img/four.jpg" alt="" class="img-fluid">
     </div>
   </div>
 </div>
+
+<section class="p-5">
 <div class="container">
 <div class="row ">
-    <div class="col logo">
-      <img src="img/diagblock.jpg" alt="" srcset="" class="img-thumbnail" >
+    <div class="col col-md-2 logo">
+      <img src="img/diagblock.jpg" alt="" srcset="" class="img-fluid img-thumbnail" >
     </div>
-    <div class="col logo">
-            <img src="img/Plant-Cloud.webp" alt="" srcset="" class="img-thumbnail">
+    <div class="col col-md-2 logo">
+            <img src="img/Plant-Cloud.webp" alt="" srcset="" class="img-fluid img-thumbnail">
     </div>
-    <div class="col logo">
-      <img src="img/good-waves.jpg" alt="" srcset="" class="img-thumbnail">
+    <div class="col col-md-2 logo">
+      <img src="img/good-waves.jpg" alt="" srcset="" class="img-fluid img-thumbnail">
     </div>
-    <div class="col logo">
-      <img src="img/monkey.jpg" alt="" srcset="" class="img-thumbnail">
+    <div class="col col-md-2 logo">
+      <img src="img/monkey.jpg" alt="" srcset="" class="img-fluid img-thumbnail">
     </div>
-    <div class="col logo">
-            <img src="img/Plant-Cloud.webp" alt="" srcset="" class="img-thumbnail">
+    <div class="col col-md-2 logo">
+            <img src="img/Plant-Cloud.webp" alt="" srcset="" class="img-fluid img-thumbnail">
     </div>
   </div>
 </div>
+</section>
 <div class="container-fluid foot p-5 text-white">
-  <div class="row">
+  <div class="row p-5">
     <div class="col">
-      <a class="Top">Re<span class="textYellow">vision</span></a>
+      <a class="footTop">Re<span class="textYellow">vision</span></a>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet unde natus officiis sed exercitationem, molestias quibusdam,
         fugiat amet voluptatem aspernatur iure earum eaque maiores repellendus ratione? Sint vel nam assumenda?</p>
     </div>
@@ -119,7 +142,7 @@
      Latest Tweets
     </div>
     <div class="col">
-      Recent posts
+      <p>Recent posts</p> 
         <b>Publish What You Learn</b>
         <p>lorem ipsum dolor sit amet consectetur adipisicing elit  adipisicing</p>
         <b>Redesigning With Personality</b>
@@ -127,36 +150,34 @@
     </div>
     <div class="col">
         <p>Photo Stream</p>
-        <div class="container">
-            <div class="row gy-2">
-                <div class="col footImg">
-                 <img src="img/one.jpg" alt="">                  
+        <!-- <div class="container"> -->
+            <div class="row row-cols-2 row-cols-4 g-2 g-lg-3">
+                <div class="col ">
+                 <img src="img/one.jpg" alt="" class="img-fluid" >                  
                 </div>
-                <div class="col footImg">
-                 <img src="img/four.jpg" alt="">   
+                <div class="col ">
+                 <img src="img/four.jpg" alt="" class="img-fluid" >   
                 </div>
-                <div class="col footImg">
-                    <img src="img/three.jpg" alt="">
+                <div class="col ">
+                    <img src="img/three.jpg" alt="" class="img-fluid" >
                 </div>
-                <div class="col footImg">
-                    <img src="img/four.jpg" alt="">
+                <div class="col ">
+                    <img src="img/four.jpg" alt="" class="img-fluid" >
                 </div>
-            </div>
-            <div class="row">
-                <div class="col footImg">
-                 <img src="img/one.jpg" alt="">                  
+                <div class="col ">
+                 <img src="img/one.jpg" alt="" class="img-fluid" >                  
                 </div>
-                <div class="col footImg">
-                 <img src="img/four.jpg" alt="">   
+                <div class="col ">
+                 <img src="img/four.jpg" alt="" class="img-fluid" >   
                 </div>
-                <div class="col footImg">
-                    <img src="img/three.jpg" alt="">
+                <div class="col ">
+                    <img src="img/three.jpg" alt="" class="img-fluid" >
                 </div>
-                <div class="col footImg">
-                    <img src="img/four.jpg" alt="">
+                <div class="col ">
+                    <img src="img/four.jpg" alt="" class="img-fluid" >
                 </div>
             </div>
-        </div>
+        
     </div>
   </div>
 </div>
